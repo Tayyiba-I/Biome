@@ -8,6 +8,8 @@ import { Trend } from 'k6/metrics';
 import { check } from 'k6';
 import ENDPOINTS from './Endpoints.js';
 
+//This K6 script performs a comprehensive performance test on both REST and GraphQL APIs,
+//  generating detailed reports in the console, a CSV file, and an easy-to-read HTML file.
 
 const AUTH_TOKEN = `Bearer ${__ENV.AUTH_TOKEN}`;
 if (AUTH_TOKEN === 'Bearer undefined') {

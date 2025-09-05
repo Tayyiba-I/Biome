@@ -3,7 +3,11 @@ import http from 'k6/http';
 import { sleep } from 'k6';
 import { Trend } from 'k6/metrics';
 import { check } from 'k6';
-import ENDPOINTS from './endpoints/OE_Compass_gql.js';
+import ENDPOINTS from './endpoints/Echo_gql.js';
+
+//  It is a comprehensive performance test designed for both GraphQL and REST APIs.
+//  It dynamically tests endpoints defined in an external file, performing detailed checks and validating GraphQL responses as they always show status 200,
+//  then provides a performance summary in the console and exports a detailed report to a CSV file.
 
 
 const AUTH_TOKEN = `Bearer ${__ENV.AUTH_TOKEN}`;
@@ -14,7 +18,7 @@ if (AUTH_TOKEN === 'Bearer undefined') {
 
 function sanitizeMetricName(name) {
   return name.replace(/[^a-zA-Z0-9_]/g, '_');
-}
+} 
 
 
 const endpointResponseTrends = {};

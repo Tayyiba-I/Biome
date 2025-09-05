@@ -1,4 +1,4 @@
-
+                  // This file contains all the endpoints of provided apis
 export default [
 
   {

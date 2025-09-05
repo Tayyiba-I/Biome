@@ -73,7 +73,7 @@ function buildUrlWithParams(url, params) {
     return queryString ? `${url}?${queryString}` : url;
 }
 
-
+\
 function getNewToken() {
     console.log('Fetching a new token...');
     // Find the login endpoint in the list
@@ -177,7 +177,7 @@ export default function (data) {
 
         
         if (res && res.status !== 0) {
-            
+            \
             const sanitizedName = sanitizeMetricName(ep.name);
             endpointResponseTrends[`${sanitizedName}_Duration`].add(res.timings.duration);
             endpointStatusTrends[`${sanitizedName}_Status`].add(res.status);

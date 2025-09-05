@@ -9,6 +9,9 @@ import { Trend } from 'k6/metrics';
 import { check } from 'k6';
 import ENDPOINTS from './Endpoints.js';
 
+//This K6 script is a load test designed to simulate a gradual increase in traffic on a set of REST and GraphQL APIs. 
+// It uses a ramping-vus scenario to increase the number of virtual users from 1 to 50 over a one-minute duration,
+//  testing the performance of each endpoint under rising load.
 
 const AUTH_TOKEN = `Bearer ${__ENV.AUTH_TOKEN}`;
 if (AUTH_TOKEN === 'Bearer undefined') {

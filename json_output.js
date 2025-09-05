@@ -5,6 +5,9 @@ import { Trend } from 'k6/metrics';
 import { check } from 'k6';
 import ENDPOINTS from './Endpoints.js';
 
+// This K6 script is a comprehensive performance test designed for both REST and GraphQL APIs.
+// The script automatically records key performance metrics and generates a detailed report in the console,
+//  a CSV file, and a raw JSON file for easy analysis of API performance and identification of bottlenecks.
 
 const AUTH_TOKEN = `Bearer ${__ENV.AUTH_TOKEN}`;
 if (AUTH_TOKEN === 'Bearer undefined') {

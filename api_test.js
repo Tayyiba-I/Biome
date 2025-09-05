@@ -5,6 +5,9 @@ import { Trend } from 'k6/metrics';
 import { check } from 'k6';
 import ENDPOINTS from './Endpoints.js';
 
+//-- api_test.js is designed to perform a comprehensive performance test on a both REST and GraphQL APIs
+// that generates a detailed summary in  console and creates the report in a CSV file.
+
 
 if (AUTH_TOKEN === 'Bearer undefined') {
   throw new Error('Authentication token is not set. Please provide it as an environment variable using "k6 run -e AUTH_TOKEN=your-token-here script.js"');

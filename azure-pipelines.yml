@@ -1,3 +1,11 @@
+
+# This Azure Pipelines script, created for an initial understanding of CI/CD,
+# installs K6 and runs a basic load test on every push to the main branch,
+# but has not been extended with more advanced features.
+
+
+
+
 # This tells the pipeline to run every time code is pushed to the 'main' branch.
 trigger:
 - main
